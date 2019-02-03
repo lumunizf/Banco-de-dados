@@ -2,9 +2,9 @@
 
 ## Exercícios dos cursos
 
-[x] - Virtualização com Oracle Virtual Box.
+ - [x] - Virtualização com Oracle Virtual Box.
 
-[x] - Banco de dados completo.
+ - [x] - Banco de dados completo.
 
 
 ## Pré-Requisitos
@@ -13,18 +13,18 @@
 
 * Windows 7 ou 10 instalado na máquina virtual.
 
-* Notepad++
+* Notepad++ instalado na máquina virtual.
 
-* BRModelo
+* BRModelo instalado na máquina virtual.
 
-* MySQL
+* MySQL instalado e configurado na máquina virtual.
 
-* .NET Framework
+* .NET Framework instalado na máquina virtual.
 
 
 ## Instalação e Configuração do ambiente
 
-### Downloads
+### Downloads dos aplicativos
 
 * [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 
