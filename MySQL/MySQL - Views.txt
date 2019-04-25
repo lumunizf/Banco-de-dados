@@ -1,0 +1,93 @@
+/* A24 - VIEWS OU VISOES */
+
+SELECT C.NOME,C.SEXO,
+	   IFNULL(C.EMAIL,'SEM EMAIL') AS "E-MAIL",
+	   T.TIPO,
+	   T.NUMERO,
+       E.BAIRRO,
+	   E.CIDADE,
+	   E.ESTADO
+FROM CLIENTE C
+INNER JOIN TELEFONE T
+ON C.IDCLIENTE = T.ID_CLIENTE
+INNER JOIN ENDERECO E
+ON C.IDCLIENTE = E.ID_CLIENTE;
+
+/* CRIANDO A VIEW */
+
+CREATE VIEW RELATORIO AS
+SELECT C.NOME,C.SEXO,
+	   IFNULL(C.EMAIL,'SEM EMAIL') AS "E-MAIL",
+	   T.TIPO,
+	   T.NUMERO,
+       E.BAIRRO,
+	   E.CIDADE,
+	   E.ESTADO
+FROM CLIENTE C
+INNER JOIN TELEFONE T
+ON C.IDCLIENTE = T.ID_CLIENTE
+INNER JOIN ENDERECO E
+ON C.IDCLIENTE = E.ID_CLIENTE;
+
+SELECT * FROM RELATORIO;
+
+SELECT * FROM RELATORIO
+WHERE SEXO = 'F';
+
+SHOW TABLES;
++--------------------+
+| Tables_in_comercio |
++--------------------+
+| cliente            |
+| endereco           |
+| relatorio          |
+| telefone           |
++--------------------+
+
+/* APAGANDO UMA VIEW */
+
+DROP VIEW RELATORIO;
+
+CREATE VIEW V_RELATORIO AS
+SELECT C.NOME,C.SEXO,
+	   IFNULL(C.EMAIL,'SEM EMAIL') AS "E-MAIL",
+	   T.TIPO,
+	   T.NUMERO,
+       E.BAIRRO,
+	   E.CIDADE,
+	   E.ESTADO
+FROM CLIENTE C
+INNER JOIN TELEFONE T
+ON C.IDCLIENTE = T.ID_CLIENTE
+INNER JOIN ENDERECO E
+ON C.IDCLIENTE = E.ID_CLIENTE;
+
+SELECT NOME, SEXO, CIDADE
+FROM V_RELATORIO;
+
++---------+------+----------------+
+| NOME    | SEXO | CIDADE         |
++---------+------+----------------+
+| JOAO    | M    | RIO DE JANEIRO |
+| JOAO    | M    | RIO DE JANEIRO |
+| JOAO    | M    | RIO DE JANEIRO |
+| CARLOS  | M    | B. HORIZONTE   |
+| ANA     | F    | SAO PAULO      |
+| ANA     | F    | SAO PAULO      |
+| CELIA   | F    | NITERÓI        |
+| CELIA   | F    | NITERÓI        |
+| CELIA   | F    | NITERÓI        |
+| ANTONIO | M    | RIO DE JANEIRO |
+| ANTONIO | M    | RIO DE JANEIRO |
+| ANTONIO | M    | RIO DE JANEIRO |
++---------+------+----------------+
+
+DELETE FROM V_RELATORIO
+WHERE NOME = 'JOAO';
+
+Can not delete from join view 'comercio.v_relatorio'
+
+INSERT INTO V_RELATORIO VALUES
+('ROMARIO','M',NULL,'RES','99723882','BARRA','RIO DE JANEIRO','RJ');
+
+Can not insert into join view 'comercio.v_relatorio' without fields list
