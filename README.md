@@ -49,3 +49,8 @@
 ## Serviço no Windows
 
 * MySQL80
+
+
+### License
+
+MIT License © Luciana Muniz Freire
