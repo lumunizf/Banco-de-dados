@@ -1,13 +1,13 @@
 # Banco de dados
 
-## Exercícios dos cursos
+### Exercícios dos cursos
 
  - [x] - Virtualização com Oracle Virtual Box.
 
  - [x] - Banco de dados completo.
 
 
-## Pré-Requisitos
+### Pré-Requisitos
 
 * Máquina virtual instalada e configurada.
 
@@ -22,9 +22,9 @@
 * .NET Framework instalado na máquina virtual.
 
 
-## Instalação e Configuração do ambiente
+### Instalação e Configuração do ambiente
 
-### Downloads dos aplicativos
+**Downloads dos aplicativos**
 
 * [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 
@@ -39,14 +39,14 @@
 * [Notepad++](https://notepad-plus-plus.org/download/v6.7.7.html/)
 
 
-## Usuários e Senhas
+### Usuários e Senhas
 
 * Root: 123456
 
 * Loo: 123456
 
 
-## Serviço no Windows
+### Serviço no Windows
 
 * MySQL80
 
