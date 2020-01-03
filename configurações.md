@@ -1,3 +1,5 @@
+## Configurações
+
 ### Pré-Requisitos
 
 * Máquina virtual instalada e configurada.
