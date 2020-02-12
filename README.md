@@ -13,4 +13,8 @@
 
 :books: Exercícios de manipulação de dados nos bancos de dados MySQL, SQL e PL/SQL.
 
+<br/>
+
+------
+
 MIT License © [Luciana Muniz Freire](https://br.linkedin.com/in/lumunizf).
