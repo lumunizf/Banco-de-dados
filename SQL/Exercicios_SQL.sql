@@ -28,9 +28,21 @@ WHERE YEAR(DATA) = 2016
 GROUP BY CPF 
 HAVING COUNT(*) > 2000
 
-select [NOME],
-case 
-    when year([DATA DE NASCIMENTO]) < 1990 then 'Adulto'
-    when year([DATA DE NASCIMENTO]) between 1990 and 1995 then 'Jovem'
-    else 'Criança' end as [Classificação Etária]
- from [TABELA DE CLIENTES]
+SELECT [NOME],
+CASE 
+    WHEN YEAR([DATA DE NASCIMENTO]) < 1990 THEN 'Adulto'
+    WHEN YEAR([DATA DE NASCIMENTO]) between 1990 and 1995 THEN 'Jovem'
+    ELSE 'Criança' END AS [Classificação Etária]
+ FROM [TABELA DE CLIENTES]
+
+ /* Faturamento anual: O valor financeiro das vendas consiste em multiplicar a quantidade pelo preço */
+SELECT YEAR(DATA), SUM (QUANTIDADE * [PREÇO]) AS FATURAMENTO
+FROM [NOTAS FISCAIS] NF INNER JOIN [ITENS NOTAS FISCAIS] INF 
+ON NF.NUMERO = INF.NUMERO
+GROUP BY YEAR(DATA)
+
+/* Exercício usando sub-consulta */
+SELECT X.CPF, X.CONTADOR FROM 
+(SELECT CPF, COUNT(*) AS CONTADOR FROM [NOTAS FISCAIS]
+WHERE YEAR(DATA) = 2016
+GROUP BY CPF) X WHERE X.CONTADOR > 2000
